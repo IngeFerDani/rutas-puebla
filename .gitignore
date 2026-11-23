@@ -1,0 +1,22 @@
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+
+# Llaves y archivos privados
+*.pem
+*.key
+serviceAccountKey.json
+*service-account*.json
+
+# Archivos del editor
+.vscode/

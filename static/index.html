@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas Puebla</title>
+    <!-- Estilos de Leaflet -->
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rutas Puebla</h1>
+        <p>Consulta y administra las paradas de transporte público</p>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Registrar nueva parada</h2>
+
+            <form id="formParada">
+                <input type="text" id="nombre" placeholder="Nombre de la parada" required>
+
+                <input type="text" id="colonia" placeholder="Colonia" required>
+
+                <input type="text" id="municipio" placeholder="Municipio" value="Puebla" required>
+
+                <input type="number" step="any" id="latitud" placeholder="Latitud" required>
+
+                <input type="number" step="any" id="longitud" placeholder="Longitud" required>
+
+                <input type="text" id="rutas" placeholder="Rutas (separadas por coma)">
+                <select id="activa">
+    <option value="true">Activa</option>
+    <option value="false">Inactiva</option>
+</select>
+
+                <button type="submit">Registrar parada</button>
+                <br>
+                <button type="button" id="cancelarEdicion" style="display: none;">
+    Cancelar edición
+</button>
+            </form>
+        </section>
+
+<section class="lista">
+    <h2>Paradas registradas</h2>
+
+    <button type="button" id="actualizarLista">
+        Actualizar lista
+    </button>
+
+    <div id="contenedorParadas">
+        <p>Cargando paradas...</p>
+    </div>
+</section>
+
+        <section class="mapa">
+            <h2>Mapa de paradas</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+<!-- Biblioteca Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
